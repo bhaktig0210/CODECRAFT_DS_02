@@ -1,69 +1,70 @@
 # CODECRAFT_DS_02
 CODCRAFT Data Science Internship Projects
 
-# Customer Shopping Behavior – Exploratory Data Analysis
+
+# 🛒 Customer Shopping Behavior Analysis
 
 ## 📌 Project Overview
 
-This project focuses on **Data Cleaning and Exploratory Data Analysis (EDA)** of a customer shopping dataset containing 1,005 records and 10 columns.
+This project focuses on **Data Cleaning and Exploratory Data Analysis (EDA)** of customer shopping behavior using Python.
 
-The objective of this project is to clean the dataset, explore customer purchasing behavior, identify patterns and relationships between variables, and generate meaningful business insights using Python.
-
-The analysis was performed using **Jupyter Notebook** with Python libraries such as Pandas, NumPy, Matplotlib, and Seaborn.
+The objective is to analyze customer demographics, purchasing patterns, product categories, payment preferences, purchase channels, customer segments, and revenue trends to identify meaningful patterns and generate actionable business insights.
 
 ---
 
 ## 🎯 Objectives
 
-The main objectives of this project are:
-
 - Understand the structure and characteristics of the dataset
+- Clean and preprocess the data
 - Identify and handle missing values
 - Detect and remove duplicate records
-- Perform data quality checks
-- Analyze numerical and categorical variables
-- Identify relationships between customer attributes and purchase behavior
+- Analyze customer demographics
+- Explore purchasing behavior and spending patterns
+- Compare purchase amounts across different categories and segments
+- Analyze revenue by category, city, and customer segment
+- Study relationships between numerical variables
 - Detect potential outliers
-- Visualize important patterns and trends
-- Generate meaningful business insights from the data
+- Generate meaningful business insights
 
 ---
 
 ## 📊 Dataset Information
 
-The dataset contains customer shopping information with the following columns:
+The dataset contains customer shopping and transaction information.
+
+### Dataset Details
+
+- **Initial Records:** 1,005
+- **Final Records:** 1,000
+- **Columns:** 10
+- **Duplicate Records Removed:** 5
+- **Missing Values After Cleaning:** 0
+
+### Features
 
 | Column | Description |
 |---|---|
-| Customer_ID | Unique identifier for each customer |
-| Age | Age of the customer |
-| Gender | Gender of the customer |
-| City | Customer's city |
-| Category | Product category purchased |
-| Purchase_Amount | Amount spent by the customer |
-| Payment_Method | Payment method used |
-| Customer_Segment | Customer classification |
-| Purchase_Channel | Channel used for purchasing |
-| Customer_Rating | Rating given by the customer |
-
-### Dataset Size
-
-- Initial Records: **1,005**
-- Columns: **10**
-- Duplicate Records Removed: **5**
-- Final Records: **1,000**
-- Final Missing Values: **0**
+| `Customer_ID` | Unique customer identifier |
+| `Age` | Age of the customer |
+| `Gender` | Gender of the customer |
+| `City` | Customer's city |
+| `Category` | Product category purchased |
+| `Purchase_Amount` | Amount spent by the customer |
+| `Payment_Method` | Payment method used |
+| `Customer_Segment` | Customer segment |
+| `Purchase_Channel` | Channel used for purchasing |
+| `Customer_Rating` | Customer rating |
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠️ Tools & Technologies
 
-- Python
-- Jupyter Notebook
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
+- **Python**
+- **Pandas**
+- **NumPy**
+- **Matplotlib**
+- **Seaborn**
+- **Jupyter Notebook**
 
 ---
 
@@ -71,34 +72,146 @@ The dataset contains customer shopping information with the following columns:
 
 The following data cleaning steps were performed:
 
-### 1. Data Loading
+1. Inspected the dataset structure and data types.
+2. Checked for missing values.
+3. Identified duplicate records.
+4. Removed 5 duplicate records.
+5. Handled missing numerical values using the median.
+6. Handled missing categorical values using the mode.
+7. Validated the cleaned dataset.
+8. Confirmed that no missing values or duplicates remained.
 
-The dataset was imported into a Pandas DataFrame.
+### Final Dataset Status
 
-### 2. Data Inspection
+| Metric | Result |
+|---|---:|
+| Records | 1,000 |
+| Columns | 10 |
+| Missing Values | 0 |
+| Duplicate Records | 0 |
 
-The dataset was examined using:
+---
 
-- `head()`
-- `tail()`
-- `shape`
-- `info()`
-- `describe()`
-- `dtypes`
+## 📈 Exploratory Data Analysis
 
-### 3. Missing Value Analysis
+### Univariate Analysis
 
-Missing values were identified using:
+The following variables were analyzed individually:
 
-```python
-df.isnull().sum()
+- Age Distribution
+- Purchase Amount Distribution
+- Customer Rating Distribution
+- Gender Distribution
+- City Distribution
+- Product Category Distribution
+- Payment Method Distribution
+- Customer Segment Distribution
+- Purchase Channel Distribution
 
-📌 Conclusion
+### Bivariate Analysis
 
-This project demonstrates a complete Exploratory Data Analysis workflow, starting from data inspection and cleaning to visualization, relationship analysis, correlation analysis, outlier detection, and business insights.
+Relationships between variables were explored using:
 
-The analysis shows that customer purchase behavior is influenced by multiple factors, while individual variables such as age alone do not strongly explain purchase amount.
+- Age vs Purchase Amount
+- Purchase Amount by Gender
+- Purchase Amount by Category
+- Purchase Amount by Customer Segment
+- Purchase Amount by Payment Method
+- Purchase Amount by Purchase Channel
 
-This project demonstrates practical skills in:
+### Revenue Analysis
 
-Python | Pandas | NumPy | Matplotlib | Seaborn | Data Cleaning | EDA | Data Visualization | Statistical Analysis
+Revenue was analyzed across:
+
+- Product Categories
+- Cities
+- Customer Segments
+
+### Statistical Analysis
+
+- Correlation Analysis
+- Outlier Detection
+- Descriptive Statistics
+
+---
+
+## 🔍 Key Findings
+
+### Customer Behavior
+
+- **Online** is the most frequently used purchase channel.
+- **Regular customers** represent the largest customer segment.
+- Female customers are slightly more numerous than male customers.
+- Customers are distributed across a broad age range.
+
+### Product & Revenue Analysis
+
+- **Beauty** has the highest number of purchases.
+- **Home & Kitchen** generates the highest total revenue among product categories.
+- Clothing generates comparatively lower total revenue.
+
+### City Analysis
+
+- **Nagpur** has the highest number of customers.
+- Nagpur also generates the highest total revenue among the analyzed cities.
+- Customer and revenue distribution varies across cities.
+
+### Payment Analysis
+
+- **Debit Card** is the most frequently used payment method.
+- **UPI** has the highest average purchase amount.
+- Credit Card has the lowest average purchase amount among the analyzed payment methods.
+
+### Purchase Channel Analysis
+
+- **Online** has the highest average purchase amount.
+- Store purchases have the lowest average purchase amount.
+- Online purchasing is an important channel for higher-value transactions.
+
+### Correlation Analysis
+
+- Age and Purchase Amount show a very weak relationship.
+- Age and Customer Rating show almost no linear relationship.
+- Purchase Amount and Customer Rating also show a very weak relationship.
+
+### Outlier Analysis
+
+- No significant extreme outliers were observed in Age, Purchase Amount, or Customer Rating based on the box plot analysis.
+
+---
+
+## 💡 Business Insights
+
+The analysis suggests that:
+
+- The business should continue focusing on its **online sales channel**.
+- Regular customers are an important contributor to overall revenue and can be targeted through loyalty programs.
+- Home & Kitchen represents a strong revenue-generating category.
+- City-level analysis can help identify high-performing markets and opportunities for growth.
+- Payment preferences can be considered when designing promotional campaigns.
+- Customer age alone is not a strong indicator of purchase value, so multiple customer attributes should be considered for segmentation and targeting.
+
+🧠 Skills Demonstrated
+Data Cleaning
+Exploratory Data Analysis
+Data Visualization
+Statistical Analysis
+Missing Value Handling
+Duplicate Detection
+Outlier Detection
+Correlation Analysis
+Business Intelligence
+Business Insight Generation
+Python
+Pandas
+NumPy
+Matplotlib
+Seaborn
+👩‍💻 Author
+
+Bhakti Ghogare
+
+B.E. in Information Technology
+
+Data Analyst | Python | SQL | Power BI | Excel
+
