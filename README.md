@@ -92,3 +92,13 @@ Missing values were identified using:
 
 ```python
 df.isnull().sum()
+
+📌 Conclusion
+
+This project demonstrates a complete Exploratory Data Analysis workflow, starting from data inspection and cleaning to visualization, relationship analysis, correlation analysis, outlier detection, and business insights.
+
+The analysis shows that customer purchase behavior is influenced by multiple factors, while individual variables such as age alone do not strongly explain purchase amount.
+
+This project demonstrates practical skills in:
+
+Python | Pandas | NumPy | Matplotlib | Seaborn | Data Cleaning | EDA | Data Visualization | Statistical Analysis
